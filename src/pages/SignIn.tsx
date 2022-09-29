@@ -20,9 +20,9 @@ export function SignIn() {
               placeholder="password"
               autoComplete="off"
             />
-            <button>login</button>
+            <button>Hyr</button>
             <p className="message">
-              Jo i rregjistruar? <Link to="/signup">Rregjistrohu</Link>
+              Jo i rregjistruar? <Link to="/sign-up">Rregjistrohu</Link>
             </p>
           </form>
         </div>

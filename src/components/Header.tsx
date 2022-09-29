@@ -5,18 +5,19 @@ export function Header() {
     <div>
       <div className="nav">
         <div className="topnav">
-          <Link to="/home">Home</Link>
+          <Link to="/kryefaqja">Kryefaqja</Link>
+          <Link to="/fakulteti">Fakultetet</Link>
           <Link to="/deget">Deget e Fakulteteve</Link>
           <Link to="/forumi">Forumi</Link>
-          <Link to="/about">Rreth nesh</Link>
+          <Link to="/rreth-nesh">Rreth nesh</Link>
           <div className="login-container">
-            <Link to="/login">
-              <button className="button">Log in</button>
+            <Link to="/sign-in">
+              <button className="button">Hyr</button>
             </Link>
           </div>
           <div className="login-container">
-            <Link to="/login">
-              <button className="button">Log out</button>
+            <Link to="/sign-in">
+              <button className="button">Dil</button>
             </Link>
           </div>
           <div className="login-container">

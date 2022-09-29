@@ -4,7 +4,7 @@ export function Discussions() {
   return (
     <>
       <Header />
-      <h1>DISCUSSIONS</h1>
+      <h1>FORUM</h1>
     </>
   );
 }

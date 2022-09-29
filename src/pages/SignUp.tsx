@@ -28,7 +28,7 @@ export function SignUp() {
             />
             <button>Rregjistrohu</button>
             <p className="message">
-              I rregjistruar? <Link to="/login">Log in</Link>
+              I rregjistruar? <Link to="/sign-in">Log in</Link>
             </p>
           </form>
         </div>

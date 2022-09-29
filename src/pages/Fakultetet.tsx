@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
 type Faculty = {
   id: number;
   name: string;
   teachers: Teacher[];
-  deget: Dega[];
 };
 
 type Teacher = {
@@ -17,13 +17,7 @@ type Teacher = {
   facultyId: number;
 };
 
-type Dega = {
-  id: number;
-  name: string;
-  facultyId: number;
-};
-
-export function Deget() {
+export function Fakultetet() {
   const [faculties, setFaculties] = useState<Faculty[]>([]);
 
   useEffect(() => {
@@ -39,13 +33,10 @@ export function Deget() {
         {faculties.map((faculty) => (
           <>
             <li>
-              <h1>{faculty.name}</h1>
+              <Link to={`/fakulteti/${faculty.id}`} key={faculty.id}>
+                {faculty.name}
+              </Link>
             </li>
-            {faculty.deget.map((dega) => (
-              <>
-                <h3>{dega.name}</h3>
-              </>
-            ))}
           </>
         ))}
       </ul>
