@@ -7,7 +7,7 @@ export function Discussions() {
   function deleteComment(id: number) {
     const commentsCopy = comments.filter((comment: any) => comment.id !== id);
 
-    fetch(`http://localhost:2212/comments/${id}`, {
+    fetch(`http://localhost:2222/comments/${id}`, {
       method: "DELETE",
     });
 
