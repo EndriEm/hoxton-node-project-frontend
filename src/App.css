@@ -166,7 +166,7 @@ h1 {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 300px;
+
   margin: 0 auto;
 }
 .container:before,
@@ -216,69 +216,6 @@ h1 {
   font-size: 18px;
   color: #d9e3ed;
   background: #3f73c0;
-}
-
-.tt-title {
-  flex: 4;
-}
-
-.tt-topic {
-  flex: 1;
-  text-align: center;
-}
-
-.tt-post {
-  flex: 1;
-  text-align: center;
-}
-
-.tt-l-post {
-  flex: 2;
-  text-align: center;
-}
-
-.topic-content {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 10px;
-  font-size: 14px;
-  color: #468499;
-  border-bottom: 1px solid #3da1d7;
-}
-
-.tc-description {
-  flex: 4;
-}
-
-.d-title {
-  color: #3da1d7;
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.d-description {
-  margin-bottom: 10px;
-}
-
-.mobile-info {
-  display: none;
-}
-
-.tc-topic {
-  flex: 1;
-  text-align: center;
-}
-
-.tc-post {
-  flex: 1;
-  text-align: center;
-}
-
-.tc-l-post {
-  flex: 2;
-  text-align: center;
 }
 
 .about-section {
@@ -530,9 +467,10 @@ svg {
   height: 200px;
   text-align: center;
   text-decoration: none;
+  border-radius: 2px;
 }
 
-.card-text{
+.card-text {
   text-decoration: none;
 }
 
@@ -563,7 +501,6 @@ body {
   background-color: #eee;
 }
 .container {
-  width: 520px;
   margin-top: 20px;
 }
 .button-group {
@@ -581,6 +518,7 @@ body {
   padding-left: 0;
   width: 100%;
   text-align: left;
+  margin-top: 50px;
 }
 .posts li {
   background-color: #fff;
@@ -599,4 +537,73 @@ body {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
+}
+
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid #ccc;
+}
+
+.tip-up {
+  top: -25px; /* Same as body margin top + border */
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.tip-down {
+  bottom: -25px;
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tip-left {
+  top: 10px;
+  left: -25px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tip-right {
+  top: 10px;
+  right: -25px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.dialogbox .body {
+  position: relative;
+
+  height: auto;
+  margin: 20px 10px;
+  padding: 5px;
+  background-color: #dadada;
+  border-radius: 3px;
+  border: 5px solid #ccc;
+}
+
+.body .message {
+  min-height: 30px;
+  border-radius: 3px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #797979;
+}
+
+.delete {
+  all: unset;
+  float: right;
+  background-color: #bbb;
+  padding: 1px;
+  border-radius: 2px;
+  cursor: pointer;
 }

@@ -4,20 +4,20 @@ import { Header } from "../components/Header";
 export function Discussions() {
   const [comments, setComments] = useState([]);
 
-  function deletePost(id: number) {
-    const commentsCopy = comments.filter((image: any) => image.id !== id);
+  function deleteComment(id: number) {
+    const commentsCopy = comments.filter((comment: any) => comment.id !== id);
 
-    fetch(`http://localhost:2222/comments/${id}`, {
+    fetch(`http://localhost:2212/comments/${id}`, {
       method: "DELETE",
     });
 
     setComments(commentsCopy);
   }
 
-  function createComment(content: string, name: string) {
+  function createComment(comment: any, name: any) {
     let newComment = {
-      content: content,
       name: name,
+      comment: comment,
     };
 
     fetch("http://localhost:2222/comments", {
@@ -28,14 +28,8 @@ export function Discussions() {
       body: JSON.stringify(newComment),
     })
       .then((resp) => resp.json())
-      .then((comment) => {
-        const imagesCopy = structuredClone(comments);
-        const image = imagesCopy.find(
-          (image: any) => image.id === comment.imageId
-        );
-        image.comments.push(comment);
-
-        setComments(imagesCopy);
+      .then((commentFromServer) => {
+        setComments([...comments, commentFromServer]);
       });
   }
 
@@ -50,21 +44,50 @@ export function Discussions() {
   return (
     <>
       <Header />
-      <h1>FORUM</h1>
-      <h2 className="heading">Add A Comment Below</h2>
-      <div className="container">
-        <form>
+      <h1 className="heading">Add A Comment Below</h1>
+      <div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            createComment(event.target.comment.value, event.target.name.value);
+            event.target.reset();
+          }}
+        >
           <div className="form-group">
+            <input type="text" name="name" placeholder="Enter you name here" />
             <textarea
               className="form-control status-box"
               placeholder="Enter your comment here..."
+              name="comment"
             ></textarea>
           </div>
+          <div className="button-group pull-right">
+            <button className="btn btn-primary">Post</button>
+          </div>
         </form>
-        <div className="button-group pull-right">
-          <button className="btn btn-primary">Post</button>
-        </div>
-        <ul className="posts"></ul>
+        <ul className="posts">
+          {comments.map((comment: any) => (
+            <div>
+              <div className="dialogbox">
+                <div className="body">
+                  <span className="tip tip-up"></span>
+                  <div className="message">
+                    <h3>{comment.name}</h3>
+                    <span>{comment.comment}</span>
+                    <button
+                      className="delete"
+                      onClick={() => {
+                        deleteComment(comment.id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </ul>
       </div>
     </>
   );
