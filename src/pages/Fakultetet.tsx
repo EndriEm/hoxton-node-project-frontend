@@ -29,10 +29,10 @@ export function Fakultetet() {
   return (
     <div>
       <Header />
-      <ul>
+      <ul className="cards">
         {faculties.map((faculty) => (
           <>
-            <li>
+            <li key={faculty.id} className="card">
               <Link to={`/fakulteti/${faculty.id}`} key={faculty.id}>
                 {faculty.name}
               </Link>

@@ -27,25 +27,25 @@ export function Fakulteti() {
       .then((faculty) => setFaculty(faculty));
   }, []);
 
-  if (faculty === null) return <p> Loading... </p>
+  if (faculty === null) return <p> Loading... </p>;
 
   return (
     <div>
       <Header />
       <ul>
-        
-          <li>
-            <h1>{faculty.name}</h1>
-            {faculty.teachers.map((teacher) => (
-              <>
+        <li>
+          <h1>{faculty.name}</h1>
+          {faculty.teachers.map((teacher) => (
+            <>
+              <div className="teacher">
                 <img src={teacher.image}></img>
                 <h2>{teacher.name}</h2>
                 <h3>{teacher.subject}</h3>
                 <h3>{teacher.email}</h3>
-              </>
-            ))}
-          </li>
-        
+              </div>
+            </>
+          ))}
+        </li>
       </ul>
     </div>
   );

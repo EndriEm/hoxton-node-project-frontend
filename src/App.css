@@ -373,6 +373,127 @@ h1 {
   color: #fff;
   font-size: 12px;
 }
+
+.mainClass {
+  width: 1250px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 24;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: 1154;
+  height: 487;
+  align-items: center;
+  background-position: 50% 0px;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+.mainSection {
+  padding-left: 2em;
+  display: flex;
+  background-color: #6e0505;
+  color: #eccb51;
+  padding-top: 1em;
+}
+
+ul.toolbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #eccb51;
+}
+
+.description {
+  padding-top: 2rem;
+  color: #7e0e0e;
+  text-align: center;
+}
+
+.txt {
+  color: #7e0e0e;
+  text-align: center;
+}
+
+ul.toolbar li {
+  padding-top: 1em;
+  float: left;
+  text-align: center;
+}
+
+ul.toolbar a:link,
+ul.toolbar a:visited {
+  display: block;
+  width: 165px;
+  color: #eccb51;
+  background-color: #6e0505;
+  padding: 3px;
+  text-decoration: none;
+}
+
+ul.toolbar a:hover,
+ul.nav a:active {
+  background-color: rgb(226, 53, 10);
+}
+
+.tagline-user {
+  display: flex;
+  justify-content: center;
+}
+
+.tagline-box {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  background: #c4c4c4;
+  color: #6e0505;
+  box-shadow: 0 3px 3px gray;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  padding-top: 0.5em;
+  float: left;
+  padding: 45px;
+  margin: 35px;
+}
+
+.button {
+  font-family: "Baloo Tamma 2", cursive;
+  color: #7e0e0e;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #eccb51;
+}
+
+ul.bottomlist {
+  list-style-type: none;
+  display: flex;
+  padding-top: 1em;
+  overflow: hidden;
+  color: #eccb51;
+  background-color: #7e0e0e;
+}
+
+svg {
+  margin-right: 1em;
+  padding-top: 0em;
+}
+
+.listTxt {
+  display: flex;
+  margin-right: 10%;
+  padding-left: 8%;
+}
+
 @media screen and (max-width: 700px) {
   .about-section-col {
     flex: 100%;
@@ -385,4 +506,91 @@ h1 {
   .about {
     text-align: center;
   }
+}
+
+.deget {
+  text-align: center;
+  list-style: none;
+}
+
+.cards {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.card {
+  background-color: white;
+  font-size: 30px;
+  margin: 5px;
+  padding: 50px 0px 50px 0px;
+  height: 200px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.teacher {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.teacher img {
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+}
+
+.heading {
+  color: #666666;
+  text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #404040;
+  background-color: #eee;
+}
+.container {
+  width: 520px;
+  margin-top: 20px;
+}
+.button-group {
+  margin-bottom: 20px;
+}
+.counter {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.posts {
+  clear: both;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  text-align: left;
+}
+.posts li {
+  background-color: #fff;
+  border: 1.5px solid #d8d8d8;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
+  box-shadow: 8px 8px 5px #888888;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }

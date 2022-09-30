@@ -35,10 +35,10 @@ export function Deget() {
   return (
     <div>
       <Header />
-      <ul>
+      <ul className="deget">
         {faculties.map((faculty) => (
           <>
-            <li>
+            <li key={faculty.id}>
               <h1>{faculty.name}</h1>
             </li>
             {faculty.deget.map((dega) => (
