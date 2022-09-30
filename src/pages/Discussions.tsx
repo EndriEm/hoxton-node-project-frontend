@@ -7,20 +7,20 @@ export function Discussions() {
   function deletePost(id: number) {
     const commentsCopy = comments.filter((image: any) => image.id !== id);
 
-    fetch(`http://localhost:3001/images/${id}`, {
+    fetch(`http://localhost:2222/comments/${id}`, {
       method: "DELETE",
     });
 
     setComments(commentsCopy);
   }
 
-  function createComment(content: string, imageId: number) {
+  function createComment(content: string, name: string) {
     let newComment = {
       content: content,
-      imageId: imageId,
+      name: name,
     };
 
-    fetch("http://localhost:3001/comments", {
+    fetch("http://localhost:2222/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

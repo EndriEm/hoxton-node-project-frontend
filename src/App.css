@@ -519,6 +519,7 @@ svg {
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
+  text-decoration: none;
 }
 
 .card {
@@ -528,6 +529,11 @@ svg {
   padding: 50px 0px 50px 0px;
   height: 200px;
   text-align: center;
+  text-decoration: none;
+}
+
+.card-text{
+  text-decoration: none;
 }
 
 ul {

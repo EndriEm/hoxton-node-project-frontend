@@ -17,7 +17,7 @@ export function Home() {
         <div className="description">
           <h1>Welcome to Hoxton University</h1>
           <p>
-            With nearly 26500 students and 150 degree programs, we’re thr
+            With nearly 26500 students and 150 degree programs, we are thr
             largest comprehensive university of Hoxton. Our hands-on,practical
             approach to teaching,ensure you are prepared for your career and
             life after graduation. learning , and faculty dedicated to teaching

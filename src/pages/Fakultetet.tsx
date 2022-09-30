@@ -33,7 +33,7 @@ export function Fakultetet() {
         {faculties.map((faculty) => (
           <>
             <li key={faculty.id} className="card">
-              <Link to={`/fakulteti/${faculty.id}`} key={faculty.id}>
+              <Link to={`/fakulteti/${faculty.id}`} key={faculty.id} className="card-text">
                 {faculty.name}
               </Link>
             </li>
